@@ -1,27 +1,5 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <ctype.h>
-#include <string.h>
-
-int ft_strlen(char *str);
-int ft_isalpha(char c);
-int ft_isdigit(int c);
-int ft_isascii(int c);
-int ft_isalnum(int c);
-int ft_isprint(int c);
-int ft_toupper(int c);
-int ft_tolower(int c);
-char *ft_strchr(const char *s, int c);
-char *ft_strrchr(const char *s, int c);
-int ft_strncmp(const char *s1, const char *s2, int n);
-char *ft_strnstr(const char *big, const char *little, int len);
-int ft_atoi(const char *nbr);
-unsigned int ft_strlcat(char *dest, char *src, unsigned int size);
-void *ft_memset(void *s, int c, int n);
-
 int main(int argc, char **argv)
 {
-    char *s_tab[5];
     (void)argc;
     //printf("%d\n", ft_strlen(argv[1]));
     //printf("%d\n", ft_isalpha(atoi(argv[1])));
@@ -41,6 +19,6 @@ int main(int argc, char **argv)
     //printf("%d", ft_strlcat(argv[1], argv[2], atoi(argv[3])));
     //printf("%s\n", ft_memset(s_tab, atoi(argv[1]), atoi(argv[2])));
     //printf("%s", memset(s_tab, atoi(argv[1]), atoi(argv[2])));
-    printf("%s\n", ft_strnstr(argv[1], argv[2], atoi(argv[3])));
-    printf("%s", strnstr(argv[1], argv[2], atoi(argv[3])));
+    //printf("%s\n", ft_strnstr(argv[1], argv[2], atoi(argv[3])));
+    //printf("%s", strnstr(argv[1], argv[2], atoi(argv[3])));
 }

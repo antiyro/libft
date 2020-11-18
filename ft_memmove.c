@@ -1,38 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nbouhada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/16 18:04:31 by nbouhada          #+#    #+#             */
-/*   Updated: 2020/11/18 15:05:52 by nbouhada         ###   ########.fr       */
+/*   Created: 2020/11/18 12:14:14 by nbouhada          #+#    #+#             */
+/*   Updated: 2020/11/18 13:45:18 by nbouhada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char	prime_lettre;
-	int	i;
-
-	i = 0;
-	if (*s == '\0' && !c)
-		return ((char *)s);
-	prime_lettre = s[0];
-	while (*s)
-	{
-		s++;
-		i++;
-	}
-	while (*s != (char)c && i != 0)
-	{
-		s--;
-		i--;
-	}
-	if (i == 0 && s[0] != (char)c)
-		return (0);
+	if (src <= dest)
+		while (n--)
+			((unsigned char *)dest)[n] = ((unsigned char *)src)[n];
 	else
-		return ((char *)s);
+		ft_memcpy(dest, src, n);
+	return ((void *)dest);
 }

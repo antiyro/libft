@@ -1,38 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nbouhada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/16 18:04:31 by nbouhada          #+#    #+#             */
-/*   Updated: 2020/11/18 15:05:52 by nbouhada         ###   ########.fr       */
+/*   Created: 2020/11/18 14:08:02 by nbouhada          #+#    #+#             */
+/*   Updated: 2020/11/18 14:58:22 by nbouhada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	char	prime_lettre;
-	int	i;
+	const unsigned char *my_s1;
+	const unsigned char *my_s2;
 
-	i = 0;
-	if (*s == '\0' && !c)
-		return ((char *)s);
-	prime_lettre = s[0];
-	while (*s)
-	{
-		s++;
-		i++;
-	}
-	while (*s != (char)c && i != 0)
-	{
-		s--;
-		i--;
-	}
-	if (i == 0 && s[0] != (char)c)
+	my_s1 = (const unsigned char *)s1;
+	my_s2 = (const unsigned char *)s2;
+	if (n == 0)
 		return (0);
-	else
-		return ((char *)s);
+	while (n)
+	{
+		if (*my_s1 != *my_s2)
+			return (*my_s1 - *my_s2);
+		if (!*my_s1)
+			break ;
+		my_s1++;
+		my_s2++;
+		n--;
+	}
+	return (0);
 }

@@ -1,38 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nbouhada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/16 18:04:31 by nbouhada          #+#    #+#             */
-/*   Updated: 2020/11/18 15:05:52 by nbouhada         ###   ########.fr       */
+/*   Created: 2020/11/18 15:34:04 by nbouhada          #+#    #+#             */
+/*   Updated: 2020/11/18 15:34:11 by nbouhada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+void    *ft_calloc(size_t nmemb, size_t size)
 {
-	char	prime_lettre;
-	int	i;
+    char *new;
 
-	i = 0;
-	if (*s == '\0' && !c)
-		return ((char *)s);
-	prime_lettre = s[0];
-	while (*s)
-	{
-		s++;
-		i++;
-	}
-	while (*s != (char)c && i != 0)
-	{
-		s--;
-		i--;
-	}
-	if (i == 0 && s[0] != (char)c)
-		return (0);
-	else
-		return ((char *)s);
+    if(!(new = (malloc(nmemb * size))))
+        return (NULL);
+    ft_memset(new, 0, nmemb * size);
+    return (new);
 }

@@ -6,22 +6,22 @@
 /*   By: nbouhada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 14:51:29 by nbouhada          #+#    #+#             */
-/*   Updated: 2020/11/17 14:51:37 by nbouhada         ###   ########.fr       */
+/*   Updated: 2020/11/18 14:58:58 by nbouhada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memset(void *s, int c, int n)
-{
-	int i;
-	unsigned char *my_s;
+#include "libft.h"
 
-	i = 0;
-	my_s = s;
-	while (my_s[i] && n > 0)
+void	*ft_memset(void *s, int c, size_t n)
+{
+	char *str;
+
+	str = s;
+	while (n)
 	{
-		my_s[i] = (unsigned char)c;
+		*str = (unsigned char)c;
 		n--;
-		i++;
+		str++;
 	}
 	return (s);
 }

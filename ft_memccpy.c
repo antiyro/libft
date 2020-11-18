@@ -1,38 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nbouhada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/16 18:04:31 by nbouhada          #+#    #+#             */
-/*   Updated: 2020/11/18 15:05:52 by nbouhada         ###   ########.fr       */
+/*   Created: 2020/11/18 11:47:43 by nbouhada          #+#    #+#             */
+/*   Updated: 2020/11/18 12:13:30 by nbouhada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
-	char	prime_lettre;
-	int	i;
+	char		*my_dest;
+	const char	*my_src;
 
-	i = 0;
-	if (*s == '\0' && !c)
-		return ((char *)s);
-	prime_lettre = s[0];
-	while (*s)
+	my_dest = dest;
+	my_src = src;
+	while (n && *my_src != (char)c)
 	{
-		s++;
-		i++;
+		*my_dest = *my_src;
+		my_dest++;
+		my_src++;
+		n--;
 	}
-	while (*s != (char)c && i != 0)
-	{
-		s--;
-		i--;
-	}
-	if (i == 0 && s[0] != (char)c)
-		return (0);
-	else
-		return ((char *)s);
+	*my_dest = (char)c;
+	return (my_dest);
 }

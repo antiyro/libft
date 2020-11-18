@@ -1,38 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nbouhada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/16 18:04:31 by nbouhada          #+#    #+#             */
-/*   Updated: 2020/11/18 15:05:52 by nbouhada         ###   ########.fr       */
+/*   Created: 2020/11/18 13:49:31 by nbouhada          #+#    #+#             */
+/*   Updated: 2020/11/18 14:06:52 by nbouhada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	char	prime_lettre;
-	int	i;
+	unsigned char *str;
 
-	i = 0;
-	if (*s == '\0' && !c)
-		return ((char *)s);
-	prime_lettre = s[0];
-	while (*s)
+	str = (unsigned char *)s;
+	while (n)
 	{
-		s++;
-		i++;
+		if (*str == ((unsigned char)c))
+			return (str);
+		str++;
+		n--;
 	}
-	while (*s != (char)c && i != 0)
-	{
-		s--;
-		i--;
-	}
-	if (i == 0 && s[0] != (char)c)
-		return (0);
-	else
-		return ((char *)s);
+	return (0);
 }
