@@ -1,23 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nbouhada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/18 15:34:04 by nbouhada          #+#    #+#             */
-/*   Updated: 2020/11/18 16:33:52 by nbouhada         ###   ########.fr       */
+/*   Created: 2020/11/18 17:33:48 by nbouhada          #+#    #+#             */
+/*   Updated: 2020/11/19 09:08:07 by nbouhada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+char		*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char *new;
+	unsigned int	i;
+	unsigned int	j;
+	char		*new;
 
-	if (!(new = (malloc(nmemb * size))))
+	if (!(new = (char *)malloc(sizeof(char) * (len + 1))))
 		return (NULL);
-	ft_memset(new, 0, nmemb * size);
+	i = 0;
+	while (s[i])
+	{
+		if (i == start)
+		{
+			j = 0;
+			while (len)
+			{
+				new[j] = s[i + j];
+				len--;
+				j++;
+			}
+		}
+		i++;
+	}
 	return (new);
 }

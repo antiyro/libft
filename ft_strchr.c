@@ -6,7 +6,7 @@
 /*   By: nbouhada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 16:20:15 by nbouhada          #+#    #+#             */
-/*   Updated: 2020/11/16 17:58:01 by nbouhada         ###   ########.fr       */
+/*   Updated: 2020/11/20 00:05:02 by nbouhada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	if (s == '\0' && !c)
+	if (*s == '\0' && !c)
 		return ((char *)s);
 	while (*s && *s != (char)c)
 		s++;

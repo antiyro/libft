@@ -1,3 +1,5 @@
+#include "libft.h"
+
 int main(int argc, char **argv)
 {
     (void)argc;
@@ -16,9 +18,14 @@ int main(int argc, char **argv)
     //printf("%d\n", strncmp(argv[1], argv[2], atoi(argv[3])));
     //printf("%d\n", ft_atoi(argv[1]));
     //printf("%d\n", atoi(argv[1]));
-    //printf("%d", ft_strlcat(argv[1], argv[2], atoi(argv[3])));
+    //printf("%zu", ft_strlcat(argv[1], argv[2], atoi(argv[3])));
     //printf("%s\n", ft_memset(s_tab, atoi(argv[1]), atoi(argv[2])));
     //printf("%s", memset(s_tab, atoi(argv[1]), atoi(argv[2])));
     //printf("%s\n", ft_strnstr(argv[1], argv[2], atoi(argv[3])));
     //printf("%s", strnstr(argv[1], argv[2], atoi(argv[3])));
+    //printf("%s\n", ft_strdup(argv[1]));
+    //printf("%s", strdup(argv[1]));
+    //printf("%s", ft_substr(argv[1], atoi(argv[2]), atoi(argv[3])));
+    //printf("%s", ft_strjoin(argv[1], argv[2]));
+    printf("%s", ft_itoa(atoi(argv[1])));
 }
