@@ -70,11 +70,11 @@ char			*ft_itoa(int n)
 		nb = n;
 	while (len_n > 0)
 	{
-		new[i] = (nb % 10 + 48);
+		new[i++] = (nb % 10 + 48);
 		nb /= 10;
-		i++;
 		len_n--;
 	}
-	new[++i] = '\0';
+	i = ((n < 0) ? (i + 1) : (i));
+	new[i] = '\0';
 	return (ft_reverse_str(new));
 }
