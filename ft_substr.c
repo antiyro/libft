@@ -35,6 +35,6 @@ char				*ft_substr(char const *s, unsigned int start, size_t len)
 		new[i] = s[start + i];
 		i++;
 	}
-	new[j] = '\0';
+	new[i] = '\0';
 	return (new);
 }
