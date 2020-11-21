@@ -14,13 +14,11 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char	prime_lettre;
 	int	i;
 
 	i = 0;
 	if (*s == '\0' && !c)
 		return ((char *)s);
-	prime_lettre = s[0];
 	while (*s)
 	{
 		s++;

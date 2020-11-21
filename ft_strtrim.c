@@ -6,15 +6,15 @@
 /*   By: nbouhada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 10:18:13 by nbouhada          #+#    #+#             */
-/*   Updated: 2020/11/19 21:21:33 by nbouhada         ###   ########.fr       */
+/*   Updated: 2020/11/20 20:20:21 by nbouhada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_check_char(char c, char *str)
+int			ft_check_char(char c, char *str)
 {
-	int	i;
+	int		i;
 
 	i = 0;
 	while (str[i])
@@ -28,8 +28,8 @@ int		ft_check_char(char c, char *str)
 
 char		*ft_strtrim(char const *s1, char const *set)
 {
-	int	start;
-	int	end;
+	int		start;
+	int		end;
 
 	start = 0;
 	end = ft_strlen(s1);

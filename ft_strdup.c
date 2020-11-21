@@ -6,7 +6,7 @@
 /*   By: nbouhada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 16:36:51 by nbouhada          #+#    #+#             */
-/*   Updated: 2020/11/18 17:26:06 by nbouhada         ###   ########.fr       */
+/*   Updated: 2020/11/20 20:21:46 by nbouhada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char		*ft_strdup(const char *s)
 {
-	int	len_s;
+	int		len_s;
 	char	*mems;
-	int	i;
+	int		i;
 
 	i = 0;
 	len_s = ft_strlen(s);
