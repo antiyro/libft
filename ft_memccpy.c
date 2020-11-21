@@ -20,6 +20,7 @@ void				*ft_memccpy(void *dest, const void *src, int c, size_t n)
 
 	my_dest = (unsigned char *)dest;
 	my_src = (unsigned char *)src;
+	i = 0;
 	while (i < n)
 	{
 		my_dest[i] = my_src[i];
