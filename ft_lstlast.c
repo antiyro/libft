@@ -6,17 +6,17 @@
 /*   By: nbouhada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 12:58:41 by nbouhada          #+#    #+#             */
-/*   Updated: 2020/11/23 12:58:44 by nbouhada         ###   ########.fr       */
+/*   Updated: 2020/11/23 15:28:34 by nbouhada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list      *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
-    if (!lst)
-        return (NULL);
-    while (lst->next)
-        lst = lst->next;
-    return (lst);
+	if (!lst)
+		return (NULL);
+	while (lst->next)
+		lst = lst->next;
+	return (lst);
 }

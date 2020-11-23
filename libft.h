@@ -6,7 +6,7 @@
 /*   By: nbouhada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 10:56:52 by nbouhada          #+#    #+#             */
-/*   Updated: 2020/11/23 10:28:02 by nbouhada         ###   ########.fr       */
+/*   Updated: 2020/11/23 15:39:23 by nbouhada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <string.h>
 # include <unistd.h>
 
-typedef	struct		s_list 
+typedef	struct		s_list
 {
 	void			*content;
 	struct s_list	*next;
