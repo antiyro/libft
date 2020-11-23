@@ -6,13 +6,13 @@
 /*   By: nbouhada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 21:19:50 by nbouhada          #+#    #+#             */
-/*   Updated: 2020/11/20 20:26:12 by nbouhada         ###   ########.fr       */
+/*   Updated: 2020/11/22 14:38:38 by nbouhada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int				ft_nbrlen(int n)
+static int		ft_nbrlen(int n)
 {
 	int			i;
 
@@ -31,7 +31,7 @@ int				ft_nbrlen(int n)
 	return (i);
 }
 
-char			*ft_reverse_str(char *str)
+static char		*ft_reverse_str(char *str)
 {
 	int			i;
 	int			j;

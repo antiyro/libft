@@ -9,7 +9,11 @@ ft_strdup.c ft_strjoin.c ft_strlcat.c ft_strlcpy.c ft_putstr_fd.c ft_strrchr.c\
 ft_strlen.c ft_strncmp.c ft_strnstr.c ft_strtrim.c ft_putnbr_fd.c ft_strmapi.c\
 ft_substr.c ft_tolower.c ft_toupper.c ft_putchar_fd.c ft_putendl_fd.c\
 
+BONUS = ft_lstnew.c ft_lstadd_front.c
+
 OBJ 	= $(SRC:.c=.o)
+
+OBJBONUS = $(BONUS:.c=.o)
 
 INC		= -I includes/
 
@@ -19,10 +23,12 @@ $(NAME): $(OBJ)
 %.o: %.c
 				$(GCC) $(INC) -o $@ -c $?
 
+bonus: $(NAME) $(OBJBONUS)
+				ar rcs ${NAME} ${OBJ} ${OBJBONUS}
 all: $(NAME)
 
 clean:
-				rm -rf $(OBJ)
+				rm -rf $(OBJ) ${OBJBONUS}
 fclean: clean
 				rm -rf $(NAME)
 re: fclean all
