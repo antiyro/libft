@@ -6,7 +6,7 @@
 /*   By: nbouhada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 10:56:52 by nbouhada          #+#    #+#             */
-/*   Updated: 2020/12/02 15:54:40 by nbouhada         ###   ########.fr       */
+/*   Updated: 2021/01/04 11:11:59 by nbouhada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,8 +80,11 @@ char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s1, char const *set);
 char				*ft_itoa(int n);
 void				ft_putchar_fd(char c, int fd);
+void				ft_putchar(char c);
 void				ft_putstr_fd(char *s, int fd);
+void				ft_putstr(char *s);
 void				ft_putnbr_fd(int n, int fd);
+void				ft_putnbr(int n);
 void				ft_putendl_fd(char *s, int fd);
 char				*ft_itoa(int n);
 char				**ft_split(char const *s, char c);

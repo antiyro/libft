@@ -1,36 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nbouhada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/17 09:53:22 by nbouhada          #+#    #+#             */
-/*   Updated: 2021/01/04 15:03:33 by nbouhada         ###   ########.fr       */
+/*   Created: 2021/01/04 10:57:36 by nbouhada          #+#    #+#             */
+/*   Updated: 2021/01/04 11:05:05 by nbouhada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(const char *nbr)
+#include "libft.h"
+
+void	ft_putstr(char *s)
 {
-	int sign;
-	int result;
 	int i;
 
-	sign = 1;
-	result = 0;
-	i = 0;
-	while ((nbr[i] >= 9 && nbr[i] <= 13) || nbr[i] == 32)
-		i++;
-	if (nbr[i] == '-' || nbr[i] == '+')
-	{
-		if (nbr[i] == '-')
-			sign *= -1;
-		i++;
-	}
-	while (nbr[i] >= '0' && nbr[i] <= '9')
-	{
-		result = result * 10 + (nbr[i] - 48);
-		i++;
-	}
-	return (result * sign);
+	i = -1;
+	while (s[i++])
+		ft_putchar(s[i]);
 }
