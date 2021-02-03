@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_fill_array.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nbouhada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/19 09:08:45 by nbouhada          #+#    #+#             */
-/*   Updated: 2020/11/19 10:38:44 by nbouhada         ###   ########.fr       */
+/*   Created: 2021/01/06 10:38:26 by nbouhada          #+#    #+#             */
+/*   Updated: 2021/01/06 11:00:38 by nbouhada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+void	ft_fill_array(char **array, char *str)
 {
-	char *new;
+	int i;
 
-	if (s1 && s2)
+	i = 0;
+	while (str[i])
 	{
-		if (!(new = (char *)malloc(sizeof(char) *
-			(ft_strlen(s1) + ft_strlen(s2) + 1))))
-			return (NULL);
-		ft_strlcpy(new, s1, ft_strlen(s1) + 1);
-		ft_strlcat(new, s2, ft_strlen(s2) + ft_strlen(s1) + 1);
-		return (new);
+		*array = str[i];
+		*array++;
+		i++;
 	}
-	return (NULL);
 }
